@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+    background-color: #020b1b;
+    grid-template-columns: 270px 612px;
+    grid-template-rows: 80px 320px;
+}
+
+.container {
+    display: grid;
+}
+
+header {
+    background-color: #3b5b92;
+    grid-column-start: 1;
+    grid-column-end: end; 
+    justify-content: center;   
+}
+
+#navSection {   
+    grid-column-start: 2;
+    grid-row-start: 2;
+    margin-top: 20px;
+    grid-template-rows: 40px;
+}
+
+nav li {
+    float: left; 
+    height: 33px;
+    background-color: #3b5b92 ;
+    align-content: center;
+    margin-left: 0px;
+    margin-right: 5px;
+}
+
+.menu {
+    text-decoration: none;
+    padding: 8px 16px;
+    color: white; 
+}
+
+nav li:hover {
+    background-color: #2d4772;
+    color: white;
+    border: #020070 solid 1px;
+}
+
+.trabalhos {
+    text-decoration: none;
+    color: white;
+}
+
+.trabalhos:hover {
+    text-decoration: underline;
+}
+
+aside {    
+    background-color: #3b5b92;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    margin-top: 20px;
+    margin-left: 20px;
+    justify-items: center;
+    width: 250px;
+    
+}
+
+section li {
+    margin-bottom: 10px;
+}
+
+section {
+    padding-right: 5px;
+    padding-left: 15px;
+    background-color: #3b5b92;
+    grid-column-end: 2;
+    margin-left: 20px;
+}
+
+section p {
+   text-align: justify; 
+   margin-right: 10px;
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+
+/* media query para outros tamanhos de tela */
+@media only screen and (max-width: 880px){
+    body {
+        grid-template-columns: 270px 100px;
+    }
+    #navSection {
+        grid-template-rows: auto;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        width: 310px;        
+    }
+    nav ul {
+        padding-left: 0px;
+        margin-bottom: 0px;        
+    }
+    nav li {
+        float: none;
+        padding-left: 10px; 
+        width: 170px;
+        height: 33px;                 
+        background-color: #3b5b92;
+        align-content: center;
+        margin-bottom: 5px;
+        
+    }
+    .menu {
+        padding: 0;
+        border: 0;
+        background-color: inherit;
+    }
+    li:hover {
+        background-color: #2d4772;
+        color: white;
+        border: #020070 solid 1px;
+    }
+    .menu:hover {
+        background-color: inherit;
+        border: none;
+    }
+}
+@media only screen and (max-width: 386px){
+    body {
+        grid-template-columns: 270px;
+    }
+    #navSection {
+        grid-template-rows: auto;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;        
+    }
+    aside {
+        margin-left: 0;
+    }
+    nav li {
+        margin-left: 0;
+    }
+    section {
+        margin-left: 0;
+        margin-right: 20px;
+    }
+}
